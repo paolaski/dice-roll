@@ -2,7 +2,7 @@
   "name": "roll-d6",
   "version": "0.0.0",
   "description": "roll-dice",
-  "main": "index.html",
+  "main": "index.html", 
   "scripts": {
     "dev": "vite",
     "build": "vite build",
