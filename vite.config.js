@@ -10,5 +10,12 @@ module.exports = {
   build: {
     outDir: "../dist",
     assetsDir: "./"
+  },
+  css: { 
+    loaderOptions: 
+    { sass: 
+      { additionalData: ` @import "@/css/index.scss"; ` 
+      } 
+    } 
   }
 };
