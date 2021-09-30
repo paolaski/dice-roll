@@ -1,0 +1,202 @@
+.d-container{
+   display: flex;
+   justify-content: center;
+}
+
+.d-dice{
+    display: flex;
+    font-size: 5em;
+    width: 150px;
+    height: 150px;
+    margin-top: 150px;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+
+    animation-name: girarDado;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+    &__dice{
+        display: grid;
+        grid-template-columns: 50px 50px 50px;
+        grid-template-rows: 50px 50px 50px;
+        width: 150px;
+        height: 150px;
+        background: #1A1A1A;
+        padding: 10px;
+
+        &__dot{
+            place-self: center;
+            width: 30px;
+            height: 30px;
+            background-color: #F4F4F4;
+            border-radius: 15px;
+        }
+        &--one{
+            //border: 5px solid red;
+            transform: translateZ(5px);
+            :nth-child(1){
+                grid-column: 2;
+                grid-row: 2;
+            }
+        }
+
+        &--two{
+            //border: 5px solid blueviolet;
+            transform: rotateY(90deg) translateZ(-90px) translateX(-90px);
+            :nth-child(1){
+                grid-column: 1;
+                grid-row: 1;
+            }
+            :nth-child(2){
+                grid-column: 3;
+                grid-row: 3;
+            }
+        }
+
+        &--three{
+            //border: 5px solid green;
+            transform: rotateY(-90deg) translateZ(423px) translateX(90px);
+            :nth-child(1){
+                grid-column: 1;
+                grid-row: 1;
+            }
+            :nth-child(2){
+                grid-column: 2;
+                grid-row: 2;
+            }
+            :nth-child(3){
+                grid-column: 3;
+                grid-row: 3;
+            }
+        }
+
+        &--four{
+            //border: 5px solid pink;
+            transform: rotateZ(-90deg) rotateY(90deg) translateY(-510px) translateX(-90px) translateZ(85px);
+            :nth-child(1){
+                grid-column: 1;
+                grid-row: 1;
+            }
+            :nth-child(2){
+                grid-column: 3;
+                grid-row: 1;
+            }
+            :nth-child(3){
+                grid-column: 1;
+                grid-row: 3;
+            }
+            :nth-child(4){
+                grid-column: 3;
+                grid-row: 3;
+            }
+        }
+
+        &--five{
+            //border: 5px solid orangered;
+            transform: rotateZ(-90deg) rotateY(90deg) translateY(-680px) translateX(-90px) translateZ(-85px);
+            :nth-child(1){
+                grid-column: 1;
+                grid-row: 1;
+            }
+            :nth-child(2){
+                grid-column: 3;
+                grid-row: 1;
+            }
+            :nth-child(3){
+                grid-column: 1;
+                grid-row: 3;
+            }
+            :nth-child(4){
+                grid-column: 3;
+                grid-row: 3;
+            }
+            :nth-child(5){
+                grid-column: 2;
+                grid-row: 2;
+            }
+        }
+
+        &--six{
+            //border: 5px solid cyan;
+            transform: translateZ(173px) translateX(-850px);
+            :nth-child(1){
+                grid-column: 1;
+                grid-row: 1;
+            }
+            :nth-child(2){
+                grid-column: 2;
+                grid-row: 1;
+            }
+            :nth-child(3){
+                grid-column: 3;
+                grid-row: 1;
+            }
+            :nth-child(4){
+                grid-column: 1;
+                grid-row: 3;
+            }
+            :nth-child(5){
+                grid-column: 2;
+                grid-row: 3;
+            }
+            :nth-child(6){
+                grid-column: 3;
+                grid-row: 3;
+            }
+        }
+}
+}
+
+.d-box{
+    margin: auto;
+    background-color: #F4F4F4;
+    border-radius: 5px;
+    width: 50%;
+    padding: 50px;
+    margin-top: 150px
+}
+
+.d-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Helvetica, sans-serif, Arial;
+   
+    &__btn{
+        color: #F4F4F4;
+        font-size: large;
+        padding: 10px 45px;
+        border-radius: 10px;
+        box-shadow: 0;
+        border: 0;
+        background-color: #1A1A1A;
+        border: 5px solid #F4F4F4;
+        
+        &:hover{
+            background-color: white;
+            color: #1A1A1A;
+            cursor:pointer;
+            border: 5px solid #1A1A1A;
+        }
+    }
+}
+
+.d-result{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    font-size: large;
+    font-family: Helvetica, sans-serif, Arial;
+}
+
+@keyframes girarDado { 
+    from { 
+         transform: rotate3d(0, 0, 0, 0deg); 
+         
+    } to { 
+         transform: rotate3d(1,1,1,360deg); 
+    }
+}
