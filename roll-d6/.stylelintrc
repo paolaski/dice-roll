@@ -1,9 +1,0 @@
-{
-    "extends": "stylelint-config-standard",
-    "rules": {
-		"https://stylelint.io/user-guide/rules/selector-nested-pattern/": "^&",
-		"https://stylelint.io/user-guide/rules/no-descending-specificity/": null,
-		"https://stylelint.io/user-guide/rules/no-eol-whitespace/": null,
-		"https://stylelint.io/user-guide/rules/declaration-empty-line-before/": null
-	}
-}
