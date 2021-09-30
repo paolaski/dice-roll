@@ -1,8 +1,8 @@
 {
-  "name": "roll-dice",
+  "name": "dice-roll",
   "version": "0.0.0",
-  "description": "roll-dice",
-  "main": "index.html", 
+  "description": "dice-roll",
+  "main": "index.html",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -15,6 +15,7 @@
     "vite": "^2.6.0"
   },
   "dependencies": {
+    "D": "^1.0.0",
     "sass": "^1.42.1"
   }
 }
